@@ -45,6 +45,8 @@ class Api:
         return self._socket.send(buffer.encode())
 
     def _work(self) -> None:
+        
+        # By default buffer_size is set to 4096, increased due to some encoding issues.
         buffer_size = 32768
         data = ""
 
